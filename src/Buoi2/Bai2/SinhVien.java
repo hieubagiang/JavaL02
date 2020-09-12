@@ -32,6 +32,14 @@ public class SinhVien {
 
     }
 
+    public void xuatSV()
+    {
+        System.out.printf("|%10s|%-30s|%10.2f|%10.2f|\n",maSV,hoTen,diemLT,diemTH);
+    }
+    public void tinhDiemTB()
+    {
+        System.out.println("DiemTB= "+ (diemTH+diemLT)/2);
+    }
     @Override
     public String toString() {
         return "SinhVien{" +
