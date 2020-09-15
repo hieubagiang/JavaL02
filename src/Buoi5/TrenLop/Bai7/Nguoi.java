@@ -1,4 +1,4 @@
-package Buoi5.TrenLop;
+package Buoi5.TrenLop.Bai7;
 
 import java.util.Scanner;
 

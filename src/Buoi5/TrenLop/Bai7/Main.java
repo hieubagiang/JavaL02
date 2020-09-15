@@ -1,4 +1,4 @@
-package Buoi5.TrenLop;
+package Buoi5.TrenLop.Bai7;
 // ý kiên của em về vấn đề nâng cao vai trò và trách nhiệm
 public class Main {
     public static void main(String[] args) {

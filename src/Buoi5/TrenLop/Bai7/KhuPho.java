@@ -1,6 +1,5 @@
-package Buoi5.TrenLop;
+package Buoi5.TrenLop.Bai7;
 
-import javax.net.ssl.HostnameVerifier;
 import java.util.ArrayList;
 import java.util.Scanner;
 
