@@ -31,9 +31,7 @@ public class QuanLySinhVien {
 
     public void sapXepTheoDiemGiamDan()
     {
-        Collections.reverse(listSV);
-        xuat();
-
+        Collections.sort(listSV);
     }
     public void nhap()
     {

@@ -78,12 +78,12 @@ public class SinhVien extends Nguoi implements Comparable<SinhVien>{
         if(this.diemTB > sv.diemTB)
         {
             return 1;
-        }
+        } else
         if(this.diemTB < sv.diemTB)
         {
             return -1;
         }
-
-        return 0;
+        else
+            return 0;
     }
 }
