@@ -7,8 +7,7 @@ public class Main {
         quanLySinhVien.xuat();
 
         quanLySinhVien.xepLoaiSinhVien();
-        System.out.println("sap xep giam theo diem");
         quanLySinhVien.sapXepTheoDiemGiamDan();
-        quanLySinhVien.xuat();
+
     }
 }

@@ -31,7 +31,9 @@ public class QuanLySinhVien {
 
     public void sapXepTheoDiemGiamDan()
     {
+        System.out.println("sap xep giam theo diem");
         Collections.sort(listSV);
+        this.xuat();
     }
     public void nhap()
     {
