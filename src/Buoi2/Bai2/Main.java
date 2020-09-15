@@ -27,12 +27,18 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        ArrayList<SinhVien> sinhVienArrayList = new ArrayList<>();
+        /*ArrayList<SinhVien> sinhVienArrayList = new ArrayList<>();
         System.out.println("Nhap so luong sv muốn nhập: ");
         int n  = sc.nextInt();
 
         nhapListSV(sinhVienArrayList,n);
         xuatListSV(sinhVienArrayList,n);
+
+        System.out.println(sinhVienArrayList.get(0).xepLoai());*/
+
+        XepLoaiClass xepLoai;
+
+        System.out.println(XepLoaiClass.Gioi);
 
     }
 }

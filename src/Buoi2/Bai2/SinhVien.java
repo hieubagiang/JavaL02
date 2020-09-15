@@ -17,6 +17,29 @@ public class SinhVien {
         this.diemTH = diemTH;
     }
 
+    public XepLoaiClass xepLoai()
+    {
+        XepLoaiClass loai;
+        if(diemTB() >=8)
+        {
+            loai = XepLoaiClass.Gioi;
+        }
+        else if(diemTB() >=6)
+        {
+            loai = XepLoaiClass.Kha;
+        }
+        else if(diemTB()>=4)
+        {
+            loai = XepLoaiClass.TrungBinh;
+        }
+        else if(diemTB()>=2)
+        {
+            loai = XepLoaiClass.Kem;
+        }
+        else
+            loai = XepLoaiClass.DiBoDoi;
+        return loai;
+    }
 
     public void nhapSV()
     {
@@ -39,6 +62,10 @@ public class SinhVien {
     public void tinhDiemTB()
     {
         System.out.println("DiemTB= "+ (diemTH+diemLT)/2);
+    }
+    public float diemTB()
+    {
+        return (float)(diemTH+diemLT)/2;
     }
     @Override
     public String toString() {
