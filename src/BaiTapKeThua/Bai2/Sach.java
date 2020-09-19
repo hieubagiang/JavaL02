@@ -1,4 +1,4 @@
-package Buoi4.TrenLop;
+package BaiTapKeThua.Bai2;
 
 public class Sach extends  TaiLieu{
     private String tenTacGia;

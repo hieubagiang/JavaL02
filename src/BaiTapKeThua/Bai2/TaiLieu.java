@@ -1,4 +1,4 @@
-package Buoi4.TrenLop;
+package BaiTapKeThua.Bai2;
 
 import java.util.Scanner;
 

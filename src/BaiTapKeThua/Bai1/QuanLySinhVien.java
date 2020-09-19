@@ -1,4 +1,4 @@
-package Buoi5.TrenLop.Bai1;
+package BaiTapKeThua.Bai1;
 
 import java.util.ArrayList;
 import java.util.Collections;
