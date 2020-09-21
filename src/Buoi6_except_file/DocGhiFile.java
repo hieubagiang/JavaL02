@@ -35,8 +35,10 @@ public class DocGhiFile {
 
                 while (line != null) {
                     if (line.length() > 0)
+                    {
                         ds.add(line);
                         line = br.readLine();
+                    }
 
                 }
 

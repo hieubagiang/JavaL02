@@ -1,8 +1,6 @@
 package Buoi6_except_file.Bai1;
 
 
-import Buoi6_except_file.DocGhiFile;
-
 import java.util.List;
 
 public class Main {
@@ -11,8 +9,11 @@ public class Main {
         quanLyKhachHang.nhap();
         quanLyKhachHang.xuat();
 
-        quanLyKhachHang.ghiFile();
-        List<KhachHang> test = quanLyKhachHang.docFile("D:\\file.txt");
-        test.toString();
+        quanLyKhachHang.ghiFilekieuText();
+        List<KhachHang> test = quanLyKhachHang.docFilekieuText("D:\\file.txt");
+        for(KhachHang t : test)
+        {
+            t.xuat();
+        }
     }
 }

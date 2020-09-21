@@ -32,7 +32,7 @@ public class QuanLyKhachHang {
             kh.xuat();
         }
     }
-    public void ghiFile()
+    public void ghiFilekieuText()
     {
         ArrayList<String> test = new ArrayList<>();
         for(KhachHang tmp : khachHangList)
@@ -40,6 +40,7 @@ public class QuanLyKhachHang {
             test.add(tmp.getMa());
             test.add(tmp.getTen());
             test.add(tmp.getNamSinh());
+            test.add("_separator_");
         }
 
         boolean kq = DocGhiFile.ghiFile(test, "d:\\file.txt");
@@ -51,18 +52,18 @@ public class QuanLyKhachHang {
 
 
     }
-    public List<KhachHang> docFile(String path)
+
+    public List<KhachHang> docFilekieuText(String path)
     {
         List<KhachHang> test = new ArrayList<>();
         ArrayList<String> ds = DocGhiFile.docFile("D:\\file.txt");
         int vitri=0;
-        for(int i=0; i<ds.size(); i=i+3)
+        for(int i=0; i<ds.size()-3; i=i+3)
         {
-            if(vitri<3)
-            {
+                if(ds.get(i).equals("_separator_")) // nếu tìm thấy phân cách i++
+                    i++;
                 KhachHang tmp = new KhachHang(ds.get(i),ds.get(i+1),ds.get(i+2));
                 test.add(tmp);
-            }
         }
         return test;
     }
