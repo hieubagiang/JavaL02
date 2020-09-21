@@ -1,7 +1,5 @@
 package Buoi6_except_file.Bai2;
 
-import Buoi6_except_file.DocGhiFile;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;

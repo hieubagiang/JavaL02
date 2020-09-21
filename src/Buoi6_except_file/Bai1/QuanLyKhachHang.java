@@ -1,7 +1,6 @@
 package Buoi6_except_file.Bai1;
 
-import BaiTapKeThua.Bai8.KhachSan;
-import Buoi6_except_file.DocGhiFile;
+import Buoi6_except_file.Bai3.DocGhiFile;
 
 import java.util.ArrayList;
 import java.util.List;

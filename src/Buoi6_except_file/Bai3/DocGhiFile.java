@@ -1,4 +1,4 @@
-package Buoi6_except_file;
+package Buoi6_except_file.Bai3;
 
 import java.io.*;
 import java.util.ArrayList;
