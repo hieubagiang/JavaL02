@@ -22,14 +22,13 @@ public class TaiLieu {
     }
     public void xuatInfo()
     {
-        System.out.println(toString());
-    }
 
+    }
     @Override
     public String toString() {
         return  "maTaiLieu='" + maTaiLieu + '\'' +
                 ", nhaXB='" + nhaXB + '\'' +
-                ", soBanPhatHanh='" + soBanPhatHanh + '\''
-                ;
+                ", soBanPhatHanh='" + soBanPhatHanh + '\'';
+
     }
 }
