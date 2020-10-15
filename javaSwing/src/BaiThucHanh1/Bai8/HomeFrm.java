@@ -18,12 +18,14 @@ public class HomeFrm extends javax.swing.JFrame {
 
     private ArrayList<Word> listWord;
     private final DefaultTableModel model;
+    
 
     /**
      *
      * Creates new form HomeFrm
      */
     public HomeFrm() {
+        
         listWord = new ArrayList<>();
         initWord();
         initComponents();

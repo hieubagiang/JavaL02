@@ -7,6 +7,7 @@ public class Main {
         QuanLyCBGV quanLyCBGV = new QuanLyCBGV();
         quanLyCBGV.nhap();
         quanLyCBGV.xuat();
-
+        quanLyCBGV.ghiFile();
+        quanLyCBGV.docFile();
     }
 }

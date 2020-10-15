@@ -1,6 +1,8 @@
 package BaiTapKeThua.Bai10;
 
-public class ThiSinhKhoiA extends ThiSinh {
+import java.io.Serializable;
+
+public class ThiSinhKhoiA extends ThiSinh implements Serializable {
     private  String monToan = "Toan";
     private  String monLy = "Ly";
     private  String monHoa = "Hoa";

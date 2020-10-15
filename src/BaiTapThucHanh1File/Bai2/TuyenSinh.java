@@ -70,7 +70,7 @@ public class TuyenSinh implements Serializable {
 
     public void ghiFile() {
         String location = "";
-        boolean kq = DocGhiSerializable.ghiSerial(this, "KeThuaBai2.dat");
+        boolean kq = DocGhiSerializable.ghiSerial(listThiSinh, "KeThuaBai2.dat");
         if (kq) {
             System.out.println("Thanh cong");
         } else {
@@ -78,10 +78,20 @@ public class TuyenSinh implements Serializable {
         }
 
     }
-    public TuyenSinh docFile()
+    public ArrayList<ThiSinh> docFile()
     {
-        TuyenSinh data = new TuyenSinh();
-        data = (TuyenSinh) DocGhiSerializable.DocSerializable("KetThuaBai2.dat");
-        return data;
+        ArrayList<ThiSinh> list = new ArrayList<>();
+        list = (ArrayList<ThiSinh>) DocGhiSerializable.DocSerializable("KeThuaBai2.dat");
+        return list;
     }
+    public void docFileXuatManHinh()
+    {
+        ArrayList<ThiSinh> readlist = new ArrayList<>();
+        readlist = docFile();
+        System.out.println("DANH SACH THI SINH");
+        for (int i = 0; i < readlist.size(); i++) {
+            System.out.println(readlist.get(i).toString());
+        }
+    }
+
 }

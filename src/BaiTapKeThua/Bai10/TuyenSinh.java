@@ -1,5 +1,7 @@
 package BaiTapKeThua.Bai10;
 
+import BaiTapThucHanh1File.Bai1.DocGhiSerializable;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -59,11 +61,49 @@ public class TuyenSinh {
             String sBD_Key = new Scanner(System.in).nextLine();
             for(int i=0; i<listThiSinh.size();i++)
             {
-                if(sBD_Key.equals(listThiSinh.get(i).hoTen))
+                if(sBD_Key.equals(listThiSinh.get(i).soBaoDanh))
                 {
                     System.out.println(listThiSinh.get(i).toString());
                 }
             }
         }
 
+    public void ghiFile() {
+        String location = "";
+        boolean kq = DocGhiSerializable.ghiSerial(listThiSinh, "KeThuaBai2.dat");
+        if (kq) {
+            System.out.println("Thanh cong");
+        } else {
+            System.out.println("that bai");
+        }
+
+    }
+    public ArrayList<ThiSinh> docFile()
+    {
+        ArrayList<ThiSinh> list = new ArrayList<>();
+        list = (ArrayList<ThiSinh>) DocGhiSerializable.DocSerializable("KeThuaBai2.dat");
+        return list;
+    }
+    public void docFileXuatManHinh()
+    {
+        ArrayList<ThiSinh> readlist = new ArrayList<>();
+        readlist = docFile();
+        System.out.println("DANH SACH THI SINH");
+        for (int i = 0; i < readlist.size(); i++) {
+            System.out.println(readlist.get(i).toString());
+        }
+    }
+
+    public void hienThiThongTin1ThiSinh() {
+
+        System.out.println("Bạn muốn tìm thí sinh nào?");
+        String hoTen_Key = new Scanner(System.in).nextLine();
+        for(int i=0; i<listThiSinh.size();i++)
+        {
+            if(hoTen_Key.equals(listThiSinh.get(i).hoTen))
+            {
+                System.out.println(listThiSinh.get(i).toString());
+            }
+        }
+    }
 }

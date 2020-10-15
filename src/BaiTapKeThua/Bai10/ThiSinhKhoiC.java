@@ -1,13 +1,15 @@
 package BaiTapKeThua.Bai10;
 
-public class ThiSinhKhoiC extends ThiSinh {
+import java.io.Serializable;
+
+public class ThiSinhKhoiC extends ThiSinh implements Serializable {
     private String monVan = "Van";
     private String monSu = "Su";
     private String monDia = "Dia";
 
     @Override
     public String toString() {
-        return "ThiDiaKhoiA{" +
+        return "ThiDiaKhoiC{" +
                 "soBaoDanh='" + soBaoDanh + '\'' +
                 ", hoTen='" + hoTen + '\'' +
                 ", diaChi='" + diaChi + '\'' +

@@ -22,4 +22,10 @@ public class QuanLyCBGV {
         System.out.println("\t\tDANH SACH CBGV");
         cbgvList.forEach(o-> o.xuat());
     }
+
+    public void ghiFile() {
+    }
+
+    public void docFile() {
+    }
 }

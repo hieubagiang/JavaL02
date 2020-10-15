@@ -11,7 +11,8 @@ public class Main {
         System.out.println("Enter 2: Hiển thị thông tin về thí sinh: ");
         System.out.println("Enter 3: Tìm thí sinh theo ID");
         System.out.println("Enter 4: Lưu vào file");
-        System.out.println("Enter 5: Exit");
+        System.out.println("Enter 5: Đọc file");
+        System.out.println("Enter 0: Exit");
         System.out.println("Vui lòng chọn: ");
     }
     public static void main(String[] args) {
@@ -29,7 +30,8 @@ public class Main {
                 case 2: tuyenSinh.xuat(); break;
                 case 3: tuyenSinh.tim_Theo_SBD(); break;
                 case 4: tuyenSinh.ghiFile();break;
-                case 5: return;
+                case 5: tuyenSinh.docFileXuatManHinh();break;
+                case 0: return;
 
                 default:
                     System.out.println("Chọn sai");

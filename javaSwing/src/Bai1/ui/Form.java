@@ -6,6 +6,7 @@
 package Bai1.ui;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 
@@ -20,6 +21,7 @@ public class Form extends javax.swing.JFrame {
      */
     public Form() {
         initComponents();
+        this.setLocationRelativeTo(null); // windows ở centre
     }
 
     /**
@@ -36,11 +38,11 @@ public class Form extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        txta = new javax.swing.JTextField();
-        txtb = new javax.swing.JTextField();
-        txtc = new javax.swing.JTextField();
+        txtA = new javax.swing.JTextField();
+        txtB = new javax.swing.JTextField();
+        txtC = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        txtKetQua = new javax.swing.JTextField();
+        txtResult = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         txtGiai = new javax.swing.JButton();
         btnXoa = new javax.swing.JButton();
@@ -60,23 +62,23 @@ public class Form extends javax.swing.JFrame {
 
         jLabel5.setText("c:");
 
-        txta.addActionListener(new java.awt.event.ActionListener() {
+        txtA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtaActionPerformed(evt);
+                txtAActionPerformed(evt);
             }
         });
 
-        txtb.addActionListener(new java.awt.event.ActionListener() {
+        txtB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtbActionPerformed(evt);
+                txtBActionPerformed(evt);
             }
         });
 
         jLabel2.setText("Kết quả");
 
-        txtKetQua.addActionListener(new java.awt.event.ActionListener() {
+        txtResult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtKetQuaActionPerformed(evt);
+                txtResultActionPerformed(evt);
             }
         });
 
@@ -97,11 +99,10 @@ public class Form extends javax.swing.JFrame {
                             .addComponent(jLabel5))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtKetQua, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txta)
-                                .addComponent(txtb)
-                                .addComponent(txtc, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)))
+                            .addComponent(txtResult, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
+                            .addComponent(txtA)
+                            .addComponent(txtB)
+                            .addComponent(txtC, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE))
                         .addGap(49, 49, 49))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -110,19 +111,19 @@ public class Form extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(txtb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(txtc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtKetQua, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtResult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -143,6 +144,11 @@ public class Form extends javax.swing.JFrame {
         });
 
         btnThoat.setText("Thoát");
+        btnThoat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnThoatActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -198,25 +204,51 @@ public class Form extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtaActionPerformed
+    private void txtAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtaActionPerformed
+    }//GEN-LAST:event_txtAActionPerformed
 
-    private void txtbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtbActionPerformed
+    private void txtBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtbActionPerformed
+    }//GEN-LAST:event_txtBActionPerformed
 
     private void txtGiaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGiaiActionPerformed
+        // xử lí event khi click "giải"
+        // khởi tạo object
+        
+        double a = Double.valueOf(txtA.getText());
+        double b = Double.valueOf(txtB.getText());
+        double c = Double.valueOf(txtC.getText());
+        PhuongTrinhBac2 ptb2 = new PhuongTrinhBac2(a,b,c);
+        String result = ptb2.giaiPTBac2(); // lấy kết quả sau khi hàm xử lí
+        
+        txtResult.setText(result); //đẩy result lên txtfield
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_txtGiaiActionPerformed
 
     private void btnXoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaActionPerformed
+        // xử lí data khí ấn xóa
+        // tức là set các trường textfield về RỖNG
+        txtA.setText("");
+        txtB.setText("");
+        txtC.setText("");
+        txtResult.setText("");
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_btnXoaActionPerformed
 
-    private void txtKetQuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKetQuaActionPerformed
+    private void txtResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtResultActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtKetQuaActionPerformed
+    }//GEN-LAST:event_txtResultActionPerformed
+
+    private void btnThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThoatActionPerformed
+        int selection = JOptionPane.showConfirmDialog(this, "Bạn có muốn thoát không ?");
+        
+        if(selection == 0)
+            this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnThoatActionPerformed
 
     /**
      * @param args the command line arguments
@@ -263,10 +295,10 @@ public class Form extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField txtA;
+    private javax.swing.JTextField txtB;
+    private javax.swing.JTextField txtC;
     private javax.swing.JButton txtGiai;
-    private javax.swing.JTextField txtKetQua;
-    private javax.swing.JTextField txta;
-    private javax.swing.JTextField txtb;
-    private javax.swing.JTextField txtc;
+    private javax.swing.JTextField txtResult;
     // End of variables declaration//GEN-END:variables
 }

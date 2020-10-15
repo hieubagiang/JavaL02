@@ -1,8 +1,9 @@
 package BaiTapThucHanh1File.Bai2;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class ThiSinh {
+public class ThiSinh implements Serializable {
     protected String soBaoDanh;
     protected String hoTen;
     protected String diaChi;
