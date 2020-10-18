@@ -9,8 +9,7 @@ public class Main {
         b.nhap();
         a.xuat();
         b.xuat();
-        MaTran c = new MaTran();
-        c = a.congMaTran(b);
+        MaTran c= a.congMaTran(b);
         c.xuat();
     }
 }

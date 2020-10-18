@@ -1,8 +1,9 @@
 package BaiTapKeThua.Bai12;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Nguoi {
+public class Nguoi implements Serializable {
     protected String hoTen;
     protected String ngaySinh;
     protected String queQuan;

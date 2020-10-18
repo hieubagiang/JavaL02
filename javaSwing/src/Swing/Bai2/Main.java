@@ -52,4 +52,26 @@ m2.sayGoodbye();
 }
  */
 
+interface Draw { 
+void print();  
+}
+interface Action{
+void tinhChuVi();
+void tinhDienTich();
+}
+class HinhVuong implements Draw,Action {
+    private double a;
+    @Override
+    public void print() {
+        System.out.println("Hình vuông có độ dài 1 cạnh là: " + a);
+    }
+    @Override
+    public void tinhChuVi() {
+        System.out.println("Chu vi hình vuông là: " + a*4);
+    }
+    @Override
+    public void tinhDienTich() {
+        System.out.println("Diện tích hình vuông là: " + a*a);
+    }
+}
 

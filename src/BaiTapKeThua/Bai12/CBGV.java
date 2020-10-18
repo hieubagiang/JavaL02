@@ -1,8 +1,9 @@
 package BaiTapKeThua.Bai12;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class CBGV extends Nguoi {
+public class CBGV extends Nguoi implements Serializable {
     private int luongCung;
     private int thuong;
     private int phat;
@@ -18,7 +19,7 @@ public class CBGV extends Nguoi {
         thuong = scanner.nextInt();
         System.out.println("Nhap phat: ");
         phat = scanner.nextInt();
-        luongThucLinh = luongCung + thuong - phat;
+
     }
 
     public void xuat()
@@ -32,7 +33,12 @@ public class CBGV extends Nguoi {
                 ", luongCung=" + luongCung +
                 ", thuong=" + thuong +
                 ", phat=" + phat +
-                ", luongThucLinh=" + luongThucLinh +
+                ", luongThucLinh=" + luongThucLinh() +
+
                 '}';
+    }
+
+    private int luongThucLinh() {
+        return luongCung + thuong - phat;
     }
 }

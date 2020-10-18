@@ -6,7 +6,7 @@ public class Main {
     public static Scanner scanner = new Scanner(System.in);
     static void Menu()
     {
-        System.out.println("Manager Candidate");
+        System.out.println("\t\tManager Candidate");
         System.out.println("Enter 1: Thêm thí sinh");
         System.out.println("Enter 2: Xuat danh sach thí sinh");
         System.out.println("Enter 3: Hiển thị thông tin về thí sinh: ");

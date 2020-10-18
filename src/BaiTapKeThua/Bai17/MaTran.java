@@ -23,7 +23,7 @@ public class MaTran {
         m = scanner.nextInt();
         System.out.println("Nhap n: ");
         n = scanner.nextInt();
-matrix= new int[m][n];
+        matrix= new int[m][n];
         for (int i = 0; i < m ; i++) {
             for (int j = 0; j < n ; j++) {
                 System.out.printf("a[%d][%d] = ",i,j);
