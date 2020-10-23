@@ -1,5 +1,3 @@
-package TestPackage;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -20,6 +18,7 @@ public class RunMain {
     // chỗ này gọi là nhập data cho lopHoc 
         
         lopHoc.nhap();
+        
         lopHoc.xuat();
 
     }
