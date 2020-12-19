@@ -6,6 +6,10 @@
 package BaiThucHanh1.Bai1;
 
 import HieuCustomizeLibrary.DocGhiSerializable;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -239,7 +243,7 @@ public class SinhVienForm extends javax.swing.JFrame implements Serializable {
                             .addComponent(txtNgaySinh, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
                             .addComponent(txtDiemTB, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)
                             .addComponent(cboGioiTinh, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(102, 102, 102))))
+                        .addGap(96, 96, 96))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -372,7 +376,7 @@ public class SinhVienForm extends javax.swing.JFrame implements Serializable {
             }
             if (isOK) {
                 listSVHTTT.add(sv);
-            }
+            x
 
         }
         if (grpSinhVienMatMa.isSelected()) {
@@ -454,11 +458,27 @@ public class SinhVienForm extends javax.swing.JFrame implements Serializable {
     }//GEN-LAST:event_cboGioiTinhActionPerformed
 
     private void btnLuuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLuuActionPerformed
-        boolean kq = DocGhiSerializable.ghiSerial(listSVMM, "listSVMM.dat");
-        kq = DocGhiSerializable.ghiSerial(listSVHTTT, "listSVHTTT.dat");
-        JOptionPane.showMessageDialog(this, kq);
-
+        FileOutputStream fos = null;
+        try {
+            // ghi file
+            fos = new FileOutputStream("SVHTTT.dat");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(listSVHTTT);
+            oos.close();
+            fos.close();
+            JOptionPane.showMessageDialog(this, "Ghi file thành công");
 // TODO add your handling code here:
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(SinhVienForm.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(SinhVienForm.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                fos.close();
+            } catch (IOException ex) {
+                Logger.getLogger(SinhVienForm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }//GEN-LAST:event_btnLuuActionPerformed
 
     private void grpSVHTTTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grpSVHTTTActionPerformed

@@ -11,4 +11,11 @@ package Bai1.model;
  */
 public class PTbac2 {
     private float a;
-    private float v;}
+    private float v;
+
+    public static void main(String[] args) {
+        System.out.println("Nhập a: ");
+        System.out.println("Nhập a: ");
+        
+    }
+}
